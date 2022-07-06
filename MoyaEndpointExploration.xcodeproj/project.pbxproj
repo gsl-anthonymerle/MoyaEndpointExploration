@@ -21,6 +21,7 @@
 		67E8F3242875B93500D129F2 /* BreedsAPITarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E8F3232875B93500D129F2 /* BreedsAPITarget.swift */; };
 		67E8F3272875B96100D129F2 /* Breed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E8F3262875B96100D129F2 /* Breed.swift */; };
 		67E8F32B2875B9F600D129F2 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E8F32A2875B9F600D129F2 /* Endpoint.swift */; };
+		67E8F32D2875CC9800D129F2 /* Publisher+DecodeBreeds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E8F32C2875CC9800D129F2 /* Publisher+DecodeBreeds.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		67E8F3232875B93500D129F2 /* BreedsAPITarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsAPITarget.swift; sourceTree = "<group>"; };
 		67E8F3262875B96100D129F2 /* Breed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Breed.swift; sourceTree = "<group>"; };
 		67E8F32A2875B9F600D129F2 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		67E8F32C2875CC9800D129F2 /* Publisher+DecodeBreeds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Publisher+DecodeBreeds.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +152,7 @@
 				67E8F3172875AA2C00D129F2 /* BreedsViewModel.swift */,
 				67E8F3232875B93500D129F2 /* BreedsAPITarget.swift */,
 				67E8F3192875AEC500D129F2 /* BreedItemView.swift */,
+				67E8F32C2875CC9800D129F2 /* Publisher+DecodeBreeds.swift */,
 			);
 			path = BreedsView;
 			sourceTree = "<group>";
@@ -316,6 +319,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				67E8F32B2875B9F600D129F2 /* Endpoint.swift in Sources */,
+				67E8F32D2875CC9800D129F2 /* Publisher+DecodeBreeds.swift in Sources */,
 				67E8F3272875B96100D129F2 /* Breed.swift in Sources */,
 				67E8F2EB2875803200D129F2 /* BreedsView.swift in Sources */,
 				67E8F3242875B93500D129F2 /* BreedsAPITarget.swift in Sources */,

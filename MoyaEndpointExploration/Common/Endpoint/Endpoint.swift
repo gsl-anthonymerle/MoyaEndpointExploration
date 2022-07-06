@@ -18,11 +18,12 @@ struct Endpoint: TargetType {
     let headers: [String : String]?
 
     init(
+        baseURL: URL,
         method: Moya.Method
     ) {
         self.init(
             path: "",
-            baseURL: URL(string: "https://catfact.ninja")!,
+            baseURL: baseURL,
             method: method,
             task: .requestPlain,
             headers: nil)
@@ -55,17 +56,6 @@ extension Endpoint {
             headers: headers)
     }
 
-    func withHeaders(
-        _ headers: [String : String]?
-    ) -> Endpoint {
-        Endpoint(
-            path: path,
-            baseURL: baseURL,
-            method: method,
-            task: task,
-            headers: headers)
-    }
-
     func withURLParameters(
         _ parameters: [String: Any]
     ) -> Endpoint {
@@ -77,5 +67,15 @@ extension Endpoint {
                 parameters: parameters,
                 encoding: URLEncoding()),
             headers: headers)
+    }
+}
+
+extension Endpoint {
+    static var catsBaseURL: URL {
+        URL(string: "https://catfact.ninja")!
+    }
+
+    static var dogsBaseURL: URL {
+        URL(string: "https://dog.ceo/api")!
     }
 }

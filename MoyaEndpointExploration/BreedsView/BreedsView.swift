@@ -7,12 +7,33 @@
 
 import SwiftUI
 
+enum Species {
+    case cats, dogs
+}
+
 struct BreedsView<ViewModel>: View where ViewModel: BreedsViewModelProtocol {
     @ObservedObject var viewModel: ViewModel
 
     var body: some View {
-        NavigationView {
+        let speciesBinding = Binding(
+            get: {
+                viewModel.selectedSpecies
+            },
+            set: {
+                viewModel.selectedSpecies = $0
+            })
+
+        return NavigationView {
             List {
+                Picker("test", selection: speciesBinding) {
+                    Text("Cat greeds")
+                        .tag(Species.cats)
+                    Text("Dog breed")
+                        .tag(Species.dogs)
+                }
+                .pickerStyle(SegmentedPickerStyle())
+                .padding(.horizontal)
+
                 ForEach(viewModel.breeds) { breed in
                     BreedItemView(breed: breed)
                         .padding(.vertical, 10)
@@ -47,6 +68,8 @@ class BreedsPreviewViewModel: BreedsViewModelProtocol {
             coat: "Grey",
             pattern: "Monochrome")
     ]
+
+    var selectedSpecies: Species = .cats
 
     func loadBreeds() {}
 }

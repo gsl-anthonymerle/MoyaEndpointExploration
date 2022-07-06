@@ -18,6 +18,8 @@
 		67E8F31A2875AEC500D129F2 /* BreedItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E8F3192875AEC500D129F2 /* BreedItemView.swift */; };
 		67E8F3202875B49300D129F2 /* CombineMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 67E8F31F2875B49300D129F2 /* CombineMoya */; };
 		67E8F3222875B49300D129F2 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 67E8F3212875B49300D129F2 /* Moya */; };
+		67E8F3242875B93500D129F2 /* BreedsAPITarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E8F3232875B93500D129F2 /* BreedsAPITarget.swift */; };
+		67E8F3272875B96100D129F2 /* Breed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E8F3262875B96100D129F2 /* Breed.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,8 @@
 		67E8F3052875803300D129F2 /* MoyaEndpointExplorationUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaEndpointExplorationUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		67E8F3172875AA2C00D129F2 /* BreedsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsViewModel.swift; sourceTree = "<group>"; };
 		67E8F3192875AEC500D129F2 /* BreedItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedItemView.swift; sourceTree = "<group>"; };
+		67E8F3232875B93500D129F2 /* BreedsAPITarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsAPITarget.swift; sourceTree = "<group>"; };
+		67E8F3262875B96100D129F2 /* Breed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Breed.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +106,7 @@
 		67E8F2E72875803200D129F2 /* MoyaEndpointExploration */ = {
 			isa = PBXGroup;
 			children = (
+				67E8F3252875B95700D129F2 /* Models */,
 				67E8F3132875A8B000D129F2 /* BreedsView */,
 				67E8F2E82875803200D129F2 /* MoyaEndpointExplorationApp.swift */,
 				67E8F2EC2875803300D129F2 /* Assets.xcassets */,
@@ -138,11 +143,20 @@
 		67E8F3132875A8B000D129F2 /* BreedsView */ = {
 			isa = PBXGroup;
 			children = (
-				67E8F3192875AEC500D129F2 /* BreedItemView.swift */,
 				67E8F2EA2875803200D129F2 /* BreedsView.swift */,
 				67E8F3172875AA2C00D129F2 /* BreedsViewModel.swift */,
+				67E8F3232875B93500D129F2 /* BreedsAPITarget.swift */,
+				67E8F3192875AEC500D129F2 /* BreedItemView.swift */,
 			);
 			path = BreedsView;
+			sourceTree = "<group>";
+		};
+		67E8F3252875B95700D129F2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				67E8F3262875B96100D129F2 /* Breed.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,7 +296,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67E8F3272875B96100D129F2 /* Breed.swift in Sources */,
 				67E8F2EB2875803200D129F2 /* BreedsView.swift in Sources */,
+				67E8F3242875B93500D129F2 /* BreedsAPITarget.swift in Sources */,
 				67E8F2E92875803200D129F2 /* MoyaEndpointExplorationApp.swift in Sources */,
 				67E8F31A2875AEC500D129F2 /* BreedItemView.swift in Sources */,
 				67E8F3182875AA2C00D129F2 /* BreedsViewModel.swift in Sources */,

@@ -10,48 +10,6 @@ import Moya
 import CombineMoya
 import Combine
 
-enum BreedsAPITarget: TargetType {
-    case breeds
-
-    var baseURL: URL { URL(string: "https://catfact.ninja")! }
-
-    var path: String { "/breeds" }
-
-    var method: Moya.Method { .get }
-
-    var sampleData: Data { Data() }
-
-    var task: Task { .requestParameters(parameters: ["page": 1], encoding: URLEncoding()) }
-
-    var headers: [String : String]? { nil }
-}
-
-struct BreedsAPIContainer: Decodable {
-    let breeds: [Breed]
-    let currentPage: Int
-    let lastPage: Int
-    let count: Int
-    let total: Int
-
-    private enum CodingKeys: String, CodingKey {
-        case breeds = "data"
-        case currentPage = "current_page"
-        case lastPage = "last_page"
-        case count = "per_page"
-        case total
-    }
-}
-
-struct Breed: Decodable, Identifiable {
-    let breed: String
-    let country: String
-    let origin: String
-    let coat: String
-    let pattern: String
-
-    var id: String { breed }
-}
-
 protocol BreedsViewModelProtocol: ObservableObject {
     var breeds: [Breed] { get }
 

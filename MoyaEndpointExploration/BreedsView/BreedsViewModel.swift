@@ -23,14 +23,14 @@ class BreedsViewModel {
         }
     }
 
-    let dataProvider = MoyaProvider<BreedsAPITarget>()
+    let dataProvider = MoyaProvider<Endpoint>()
     private var cancellables: Set<AnyCancellable> = []
 }
 
 extension BreedsViewModel: BreedsViewModelProtocol {
     func loadBreeds() {
         dataProvider
-            .requestPublisher(.breeds)
+            .requestPublisher(.breeds(pageIndex: 1))
             .map(\.data)
             .decode(type: BreedsAPIContainer.self, decoder: JSONDecoder())
             .map(\.breeds)

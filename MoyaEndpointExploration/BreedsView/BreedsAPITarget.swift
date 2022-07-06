@@ -23,3 +23,13 @@ enum BreedsAPITarget: TargetType {
 
     var headers: [String : String]? { nil }
 }
+
+extension Endpoint {
+    static func breeds(pageIndex: Int) -> Endpoint {
+        Endpoint(method: .get)
+            .extendingPath(with: "/breeds")
+            .withURLParameters([
+                "page": pageIndex
+            ])
+    }
+}
